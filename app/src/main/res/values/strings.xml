@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">toDoList</string>
+    <string name="status">mark as Complete</string>
+    <string name="time">Yesterday</string>
+    <string name="actitity">Activity</string>
+    <string name="description">this Space enables Us to give a \ndetail on the actitivies that are done everyday</string>
 </resources>
