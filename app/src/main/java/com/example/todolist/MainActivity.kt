@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
 
 
         val arrayAdapter= ArrayAdapter(this, R.layout.list_item_layout, R.id.TextVeiw,countryList)
+
         myList.adapter= arrayAdapter
     }
 }
