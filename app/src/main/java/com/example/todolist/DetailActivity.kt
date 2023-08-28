@@ -17,7 +17,6 @@ class DetailActivity : AppCompatActivity() {
         val icon= findViewById<ImageView>(R.id.imageViewDescription)
         icon.setImageResource(image)
 
-        val
 
     }
 }

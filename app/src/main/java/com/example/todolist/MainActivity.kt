@@ -14,8 +14,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val list=ArrayList<ActivityModel>()
-        list.add(ActivityModel(R.drawable.music_picture,"Listening_MuSIC","Evening","List to the music of my Favorite",
-            ActivityStatus.pending))
+        list.add(ActivityModel(R.drawable.music_picture,"Listening_MuSIC","NIGHT TIME","List to the music of my Favorite", ActivityStatus.pending))
+        list.add(ActivityModel(R.drawable.music_picture,"Listening_MuSIC","NIGHT TIME","List to the music of my Favorite", ActivityStatus.pending))
+        list.add(ActivityModel(R.drawable.music_picture,"Listening_MuSIC","NIGHT TIME","List to the music of my Favorite", ActivityStatus.pending))
         list.add(ActivityModel(R.drawable.music_picture,"Listening_MuSIC","Evening","List to the music of my Favorite",
             ActivityStatus.pending))
         list.add(ActivityModel(R.drawable.music_picture,"Listening_MuSIC","Evening","List to the music of my Favorite",
