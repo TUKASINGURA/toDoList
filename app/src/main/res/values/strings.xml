@@ -4,4 +4,6 @@
     <string name="time">Yesterday</string>
     <string name="actitity">Activity</string>
     <string name="description">this Space enables Us to give a \ndetail on the actitivies that are done everyday</string>
+    <string name="capture">Capture Image</string>
+    <string name="date">Update and Time</string>
 </resources>
