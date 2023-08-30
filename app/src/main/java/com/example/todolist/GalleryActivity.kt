@@ -1,14 +1,15 @@
 package com.example.todolist
 
 import android.app.DatePickerDialog
-import android.app.TimePickerDialog
+import android.content.ActivityNotFoundException
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.MediaStore
 import android.util.Log
-import android.widget.Button
 import android.widget.DatePicker
+import android.widget.ImageView
 import android.widget.TextView
-import java.sql.Timestamp
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
@@ -22,7 +23,24 @@ class GalleryActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener{
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gallery)
 
-        val datePicker= findViewById<TextView>(R.id.textView)
+        //start of the activity for the camera action
+        val imageCapture = findViewById<ImageView>(R.id.capture_image)
+            imageCapture.setOnClickListener{
+            val REQUEST_IMAGE_CAPTURE = 1
+
+           fun dispatchTakePictureIntent() {
+                val takePictureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+                try {
+                    startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE)
+                } catch (e: ActivityNotFoundException) {
+                    // display error state to the user
+                }
+            }
+        }
+        
+///end of activity for the camera action on the application
+
+        val datePicker= findViewById<TextView>(R.id.calender)
         datePicker.setOnClickListener{
             DatePickerDialog(
                 this,
@@ -40,7 +58,7 @@ class GalleryActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener{
         displayFormattedDate(calender.timeInMillis)
     }
         fun displayFormattedDate(timestamp:Long){
-            findViewById<TextView>(R.id.textView).text= formatter.format(timestamp)
+            findViewById<TextView>(R.id.calender).text= formatter.format(timestamp)
             Log.i("formatting",timestamp.toString())
         }
 }
