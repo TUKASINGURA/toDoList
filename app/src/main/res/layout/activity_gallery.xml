@@ -1,50 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-    app:layout_marginBaseline="10dp"
-    tools:context=".GalleryActivity">
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".GalleryActivity">
     <!-- setting the image where our image will be displayed-->
 
-    <ImageView
-        android:id="@+id/capture_image"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        app:layout_constraintTop_toBottomOf="@+id/capture_button"
-        app:srcCompat="@drawable/baseline_photo_size_select_actual_24"
-        tools:layout_editor_absoluteX="65dp" />
 
-    <TextView
-        android:id="@+id/capture_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/capture"
-        android:textSize="20sp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="65dp" />
+        <ImageView
+            android:id="@+id/capture_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/capture_button"
+            app:layout_marginBaseline="10dp"
+            app:srcCompat="@drawable/baseline_photo_size_select_actual_24" />
 
-    <Button
-        android:id="@+id/calender"
-        android:layout_width="302dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/date"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="428dp" />
+        <TextView
+            android:id="@+id/capture_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/a"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="65dp" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/im"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@+id/capture_image"
-        tools:layout_editor_absoluteX="104dp" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_name"
+            android:hint="Enter the activity Name"
+            android:id="@+id/activity_name_text"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            app:layout_constraintTop_toBottomOf="@+id/activity_name_text"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/activity_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:gravity="center"
+            android:text="@string/i1"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/capture_image"
+            app:layout_marginBaseline="10dp" />
+
+        <ImageView
+            android:id="@+id/galleryImage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/capture_image"
+            app:layout_constraintTop_toBottomOf="@+id/capture_button"
+            app:layout_marginBaseline="10dp"
+            app:srcCompat="@drawable/baseline_add_24" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

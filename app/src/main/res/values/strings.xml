@@ -7,4 +7,8 @@
     <string name="capture">Capture Image</string>
     <string name="date">Update and Time</string>
     <string name="im">image Description</string>
+    <string name="a">Add or Capture image</string>
+    <string name="i">Activity Name\n</string>
+    <string name="i1">Activity Name</string>
+    <string name="chara">Activity Description</string>
 </resources>

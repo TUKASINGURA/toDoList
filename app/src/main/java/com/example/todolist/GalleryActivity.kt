@@ -25,18 +25,10 @@ class GalleryActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener{
 
         //start of the activity for the camera action
         val imageCapture = findViewById<ImageView>(R.id.capture_image)
-            imageCapture.setOnClickListener{
-            val REQUEST_IMAGE_CAPTURE = 1
-
-           fun dispatchTakePictureIntent() {
-                val takePictureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-                try {
-                    startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE)
-                } catch (e: ActivityNotFoundException) {
-                    // display error state to the user
-                }
+        imageCapture.setOnClickListener{
+            dispatchTakePictureIntent()
             }
-        }
+
         
 ///end of activity for the camera action on the application
 
@@ -49,6 +41,16 @@ class GalleryActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener{
                 calender.get(Calendar.MONTH),
                 calender.get(Calendar.DAY_OF_MONTH)
             ) .show()
+        }
+    }
+    val REQUEST_IMAGE_CAPTURE = 1
+
+    private fun dispatchTakePictureIntent() {
+        val takePictureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        try {
+            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE)
+        } catch (e: ActivityNotFoundException) {
+            // display error state to the user
         }
     }
 
