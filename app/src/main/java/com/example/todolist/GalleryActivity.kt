@@ -1,5 +1,6 @@
 package com.example.todolist
 
+import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.content.ActivityNotFoundException
 import android.content.Intent
@@ -19,6 +20,7 @@ class GalleryActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener{
     private val calender= Calendar.getInstance()
     private val formatter= SimpleDateFormat("MMM,dd, YYYY", Locale.US)
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gallery)

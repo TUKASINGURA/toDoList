@@ -11,4 +11,6 @@
     <string name="i">Activity Name\n</string>
     <string name="i1">Activity Name</string>
     <string name="chara">Activity Description</string>
+    <string name="nameac">Enter the activity Name</string>
+    <string name="da">Enter the Description</string>
 </resources>
